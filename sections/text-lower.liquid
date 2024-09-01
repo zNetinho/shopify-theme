@@ -1,0 +1,92 @@
+{%- style -%}
+  .text-lower-seo {
+    width: 100%;
+    height: auto;
+    padding: 0 {{ section.blocks.last.settings.spacing_for_element_text_seo }}rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: .5rem 0;
+  }
+
+{%- endstyle -%}
+
+{% for block in section.blocks %}
+  <section
+    style="display: flex; justify-content: {{ block.settings.content_alignment_for_text_seo }}"
+    {{ block.shopify_attributes }}
+  >
+    <div class="{{ block.settings.class }} {{ block.settings.content_alignment_for_text_seo }}">
+      {{ block.settings.text }}
+    </div>
+  </section>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "t:sections.text-lower.name",
+  "tag": "section",
+  "class": "text-lower-seo",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "text-lower",
+      "label": "t:sections.text-lower.blocks.text.settings.text.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.text-lower.blocks.text.settings.text.label",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.text-lower.blocks.text.name"
+        },
+        {
+          "type": "select",
+          "id": "content_alignment_for_text_seo",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.text-lower.blocks.content_alignment_for_text_seo.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.text-lower.blocks.content_alignment_for_text_seo.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.text-lower.blocks.content_alignment_for_text_seo.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.text-lower.blocks.content_alignment_for_text_seo.label"
+        },
+        {
+          "type": "range",
+          "id": "spacing_for_element_text_seo",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 1,
+          "label": "t:sections.text-lower.blocks.spacing_for_element_text_seo.label",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.text-lower.presets.name",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "text",
+        }
+      ]
+    }
+  ],
+}
+{% endschema %}
