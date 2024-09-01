@@ -3190,6 +3190,56 @@
         "name": "Slideshow"
       }
     },
+    "text-lower": {
+      "name": "Text lower",
+      "settings": {
+        "text-lower": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text",
+              "default": "Text SEO"
+            }
+          }
+        },
+      },
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            }
+          }
+        },
+        "content_alignment_for_text_seo": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Position of text",
+          "info": "Position of text on site",
+        },
+        "spacing_for_element_text_seo": {
+          "name": "Specific a value",
+          "settings":{
+            "range": {
+              "label": "Specific a value",
+              "default": "1rem"
+            }
+          },
+          "label": "Spacing for element"
+        }
+      },
+      "presets": {
+        "name": "Text lower SEO"
+      }
+    },
     "collapsible_content": {
       "name": "Collapsible content",
       "settings": {
