@@ -39,7 +39,21 @@
     },
     "text-lower": {
       "type": "text-lower",
+      "blocks": {
+        "text_aWtRTd": {
+          "type": "text",
+          "settings": {
+            "text": "{{ collection.metafields.custom.texto_seo2 | metafield_tag }}",
+            "content_alignment_for_text_seo": "center",
+            "spacing_for_element_text_seo": 3
+          }
+        }
+      },
+      "block_order": [
+        "text_aWtRTd"
+      ],
       "settings": {
+        "text-lower": ""
       }
     }
   },
